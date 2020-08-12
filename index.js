@@ -9,6 +9,7 @@ class Formatter {
     static titleize(string) {
     const splitStr = string.toLowerCase().split(" ");
     const exceptions = [
+<<<<<<< HEAD
       "the",
       "a",
       "an",
@@ -23,12 +24,36 @@ class Formatter {
 
     for (let i = 0; i < splitStr.length; i++) {
       if (i > 0 && exceptions.includes(splitStr[i])) continue;
+=======
+      "and",
+      "the",
+      "a",
+      "an",
+      "for",
+      "to",
+      "but",
+      "at",
+      "by",
+       "of",
+      "form"
+    ];
+
+    for (let i = 0; i < splitStr.length; i++) {
+      if (i > 0 && exceptions.includes(splitStr[i]))
+        // if it's an exception skip the capatilization
+        continue;
+
+>>>>>>> 8b6f341cff7819d31088e52459aefee4ad0de786
       splitStr[i] =
         splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
     }
     const array = splitStr.join(" ");
     array.toString();
+<<<<<<< HEAD
     return array;
+=======
+    console.log(array);
+>>>>>>> 8b6f341cff7819d31088e52459aefee4ad0de786
   }
 }
 Formatter.capitalize("crocodile");
